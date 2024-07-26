@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000; /* Black background color */
+  position: relative; /* Ensure positioning works for the back arrow */
+}
+
+.portfolio-container {
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #ffcf33; /* Yellow text color */
+  margin-bottom: 40px;
+}
+
+.certificates-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.certificate {
+  background-color: #ffcf33; /* Yellow background */
+  border: 3px solid #000; /* Thicker black border */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(33% - 20px);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.certificate img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.certificate-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.certificate-info h3 {
+  margin: 0;
+  color: #333;
+}
+
+.certificate-info p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.certificate:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(255, 255, 0, 0.6); /* Yellow light glow on hover */
+  border: 3px solid #ffcf33; /* Thicker yellow border on hover */
+}
+
+.back-arrow {
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1000; /* Ensures it stays on top */
+}
+
+.back-arrow svg {
+  fill: #ffffff; /* White color for the arrow */
+  transition: fill 0.3s ease;
+}
+
+.back-arrow:hover svg {
+  fill: #ffcf33; /* Change color on hover if desired */
+}
+
+@media (max-width: 768px) {
+  .certificate {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .certificate {
+    width: 100%;
+  }
+}

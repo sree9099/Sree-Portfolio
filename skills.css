@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  font-family: sans-serif;
+}
+
+/* Back Arrow Styling */
+.back-arrow {
+  position: absolute;
+  top: 20px; /* Adjust distance from top */
+  left: 20px; /* Adjust distance from left */
+  font-size: 24px; /* Adjust size as needed */
+  color: #fff; /* White color for default state */
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.back-arrow:hover {
+  color: #ffcf33; /* Yellow color on hover */
+}
+
+h1 {
+  font-family: sans-serif;
+  color: #ffcf33; /* Yellow text color */
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+  color: #fff; /* White text color */
+  margin: 20px 0;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.skills {
+  width: 500px;
+  margin: 60px auto;
+  color: #fff; /* White text color */
+  padding: 20px;
+  border: 2px solid #ffcf33; /* Yellow border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 20px #ffcf33; /* Yellow glow light */
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+}
+
+.bar {
+  background-color: #353b48;
+  display: block;
+  height: 8px; /* Adjust height for reduced thickness */
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  width: 80%; /* Width for the bar */
+  margin-right: 10px; /* Space between the bar and percentage */
+  border: 1px solid #ffcf33; /* Add a yellow border */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Light shadow for better visibility */
+}
+
+.bar::after {
+  content: "";
+  display: block;
+  height: 100%;
+  background-color: #ffcf33; /* Yellow for the progress indicator */
+  transition: width 2s; /* Smooth animation */
+}
+
+.java::after {
+  width: 70%;
+}
+
+.cpp::after {
+  width: 75%;
+}
+
+.html::after {
+  width: 80%;
+}
+
+.css::after {
+  width: 93%;
+}
+
+.javascript::after {
+  width: 50%;
+}
+
+.react::after {
+  width: 65%;
+}
+
+.percentage {
+  color: #ffcf33;
+  font-weight: bold;
+}
